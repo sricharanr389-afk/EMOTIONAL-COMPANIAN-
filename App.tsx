@@ -5,6 +5,7 @@ import { saveMoodEntry, getMoodHistory, getChatHistory, saveChatHistory, getLast
 import { PersonaSelector } from './components/PersonaSelector';
 import { ChatInterface } from './components/ChatInterface';
 import { MoodChart } from './components/MoodChart';
+import { PERSONAS } from './constants';
 import { 
   Sparkles, 
   Activity, 
@@ -99,6 +100,8 @@ const App: React.FC = () => {
     }
   };
 
+  const activePersona = PERSONAS[currentPersona];
+
   return (
     <div className="flex h-screen bg-white overflow-hidden">
       
@@ -185,7 +188,7 @@ const App: React.FC = () => {
               {isSidebarOpen ? <PanelLeftClose size={20} /> : <PanelLeftOpen size={20} />}
             </button>
             <span className="font-semibold text-gray-700 opacity-0 md:opacity-100 transition-opacity">
-              {/* Title or Current Persona can go here */}
+              {activePersona.name} <span className="text-gray-400 font-normal text-sm">({activePersona.id.toLowerCase()})</span>
             </span>
           </div>
           <div className="flex items-center gap-2">
