@@ -1,0 +1,7 @@
+{
+  "name": "EmotiCompanion",
+  "description": "An AI emotional support companion that adapts its personality to your needs (Friend, Therapist, or Advisor) with mood tracking capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
